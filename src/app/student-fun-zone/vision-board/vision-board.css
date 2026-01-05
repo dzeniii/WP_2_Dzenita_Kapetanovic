@@ -1,0 +1,108 @@
+h3 {
+  margin-top: 10px;
+  color: #007BFF;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.toolbar button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.toolbar button:hover {
+  background-color: #0056b3;
+}
+
+.vision-board {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-color: #f5f5f5;
+  background-image: url('/assets/slike/pluto.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  border: 2px dashed #007BFF;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.note, .quote, .pinned-img {
+  position: absolute;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: move;
+  user-select: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.1s ease;
+}
+
+.note.color1 { background: #fdfd96; }
+.note.color2 { background: #ffb6b9; }
+.note.color3 { background: #c6f1e7; }
+.note.color4 { background: #f6d6ad; }
+.note.color5 { background: #d4a5a5; }
+.note.color6 { background: #b5ead7; }
+
+.note[contenteditable="true"], .quote[contenteditable="true"] {
+  outline: none;
+  min-width: 100px;
+  min-height: 60px;
+  font-size: 14px;
+}
+
+.quote {
+  font-family: "Georgia", serif;
+  color: #4b382a;
+  background: #fff5e6;
+  font-style: italic;
+  text-align: center;
+  width: 200px;
+}
+
+.pinned-img img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: none;
+  border: none;
+  color: #b30000;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.note:hover .delete-btn,
+.quote:hover .delete-btn,
+.pinned-img:hover .delete-btn {
+  opacity: 1;
+}
+
+.delete-btn:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}

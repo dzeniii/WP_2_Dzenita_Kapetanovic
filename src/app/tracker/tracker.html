@@ -1,0 +1,23 @@
+<h2>Your Trackers</h2>
+
+<!-- Clickable cards -->
+<div class="tracker-cards">
+  <div class="card" (click)="toggleTracker('habit')" [class.active]="isSelected('habit')">Habit Tracker</div>
+  <div class="card" (click)="toggleTracker('sleep')" [class.active]="isSelected('sleep')">Sleep Tracker</div>
+  <div class="card" (click)="toggleTracker('study')" [class.active]="isSelected('study')">Study Planner</div>
+  <div class="card" (click)="toggleTracker('yoga')" [class.active]="isSelected('yoga')">Yoga / Fitness Planner</div>
+  <div class="card" (click)="toggleTracker('task')" [class.active]="isSelected('task')">Task / Project Planner</div>
+  <div class="card" (click)="toggleTracker('water')" [class.active]="isSelected('water')">Water Intake</div>
+</div>
+
+<hr>
+
+<h3>Odabrani trackeri:</h3>
+<div class="selected-trackers">
+  <app-habit-tracker *ngIf="isSelected('habit')"></app-habit-tracker>
+  <app-sleep-tracker *ngIf="isSelected('sleep')"></app-sleep-tracker>
+  <app-study-planner *ngIf="isSelected('study')"></app-study-planner>
+  <app-yoga-fitness *ngIf="isSelected('yoga')"></app-yoga-fitness>
+  <app-task-planner *ngIf="isSelected('task')"></app-task-planner>
+  <app-water-intake *ngIf="isSelected('water')"></app-water-intake>
+</div>

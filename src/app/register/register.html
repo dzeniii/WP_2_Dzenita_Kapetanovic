@@ -1,0 +1,23 @@
+<h2>Registracija</h2>
+<form (ngSubmit)="registerUser()">
+  <label>Ime:</label>
+  <input type="text" [(ngModel)]="name" name="name" required>
+
+  <label>Email:</label>
+  <input type="email" [(ngModel)]="email" name="email" required>
+
+  <label>Password:</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+
+  <label>Odaberi temu:</label>
+  <select [(ngModel)]="theme" name="theme">
+    <option value="green">Zelena</option>
+    <option value="blue">Plava</option>
+    <option value="pink">Roza</option>
+    <option value="orange">Narandžasta</option>
+    <option value="dark">Dark</option>
+    <option value="cyberpunk">Cyberpunk</option>
+  </select>
+
+  <button type="submit">Registruj se</button>
+</form>

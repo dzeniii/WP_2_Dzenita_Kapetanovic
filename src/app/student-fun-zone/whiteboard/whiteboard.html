@@ -1,0 +1,17 @@
+<h1>Interaktivni Whiteboard</h1>
+
+<div class="toolbar">
+  <label for="colorPicker">Boja:</label>
+  <input type="color" id="colorPicker" [(ngModel)]="color">
+
+  <label for="brushSize">Četka:</label>
+  <input type="range" id="brushSize" min="1" max="20" [(ngModel)]="brushSize">
+
+  <button type="button" (click)="toggleEraser()">{{ isErasing ? 'Piši' : 'Briši' }}</button>
+  <button type="button" (click)="clearBoard()">Čista ploča</button>
+  <button type="button" (click)="saveBoard()">Snimi</button>
+</div>
+
+<canvas #board width="900" height="500"></canvas>
+
+
