@@ -2,5 +2,13 @@
 <p>Koliko vode ste danas popili? (ml)</p>
 
 <input type="number" [(ngModel)]="waterAmount" placeholder="npr. 500" />
-
 <button (click)="saveWater()">Save</button>
+
+<p *ngIf="waterAmount > 0">Danas ste popili: {{ waterAmount }} ml vode.</p>
+
+<hr />
+
+<h4>Dnevni unos</h4>
+<ul>
+  <li *ngFor="let entry of dailyIntake">{{ entry.time }} - {{ entry.amount }} ml</li>
+</ul>

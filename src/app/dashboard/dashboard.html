@@ -4,11 +4,13 @@
       <li><a routerLink="profile" routerLinkActive="active">Profile</a></li>
       <li><a routerLink="trackers" routerLinkActive="active">Trackers</a></li>
       <li><a routerLink="student-fun-zone" routerLinkActive="active">Student Fun Zone</a></li>
+      <li><a (click)="logout()" class="logout-link">Logout</a></li>
     </ul>
   </nav>
 </header>
 
 <section class="dashboard-content">
+  <p *ngIf="showWelcome">Dobrodošli u Dashboard! Odaberite opciju iz navigacije iznad da biste vidjeli sadržaj.</p>
   <router-outlet></router-outlet>
 </section>
 <footer>

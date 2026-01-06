@@ -1,4 +1,37 @@
 <h3>Sleep Tracker</h3>
-<p>Koliko sati ste spavali?</p>
-<input type="number" [(ngModel)]="sleepHours" placeholder="npr. 7" />
-<button (click)="saveSleep()">Save</button>
+
+<div class="sleep-box">
+  <label>Vrijeme odlaska na spavanje:</label>
+  <input type="time" [(ngModel)]="sleepTime" (change)="calculateSleepHours()" />
+</div>
+
+<div class="sleep-box">
+  <label>Vrijeme buđenja:</label>
+  <input type="time" [(ngModel)]="wakeTime" (change)="calculateSleepHours()" />
+</div>
+
+<div class="sleep-box">
+  <label>Kvaliteta sna:</label>
+  <select [(ngModel)]="sleepQuality">
+    <option value="los">Loš</option>
+    <option value="srednji">Srednji</option>
+    <option value="dobar">Dobar</option>
+    <option value="odlican">Odličan</option>
+  </select>
+</div>
+
+<div class="sleep-box">
+  <p>Sati sna: {{ sleepHours }}</p>
+</div>
+
+<button (click)="saveSleep()">Spremi</button>
+
+<hr>
+
+<h4>Historija spavanja:</h4>
+<ul>
+  <li *ngFor="let h of history">
+    {{ h.date }} - {{ h.hours }} sati ({{ h.quality }})
+  </li>
+</ul>
+

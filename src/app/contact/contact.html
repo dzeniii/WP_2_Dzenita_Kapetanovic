@@ -1,0 +1,81 @@
+<header>
+  <div class="header-logo">
+    <a routerLink="/">
+      <img src="/assets/slike/logo-ipi.png" alt="Kursevi IPI">
+    </a>
+  </div>
+ <nav>
+  <ul>
+    <li><a routerLink="/">O kursevima</a></li>
+    <li><a routerLink="/courses">Popis kurseva</a></li>
+    <li><a routerLink="/schedule">Raspored</a></li>
+    <li><a routerLink="/contact">Kontakt</a></li>
+    <li><button type="button" (click)="navigate('/login', $event)" class="nav-btn login-btn">Prijava</button></li>
+    <li><button type="button" (click)="navigate('/register', $event)" class="nav-btn register-btn">Registracija</button></li>
+  </ul>
+</nav>
+
+</header>
+
+<article>
+  <h2>Kontakt</h2>
+  <img class="kontakt-srce" src="/assets/slike/srce.jpg" alt="Srce">
+
+  <p>Do IPI-ja se može doći javnim gradskim prevozom ili taksijem.</p>
+  <p>Naša adresa je:</p>
+  <p>
+      Sveučilišni računski centar<br>
+      Kulina bana br. 2 (Skver)<br>
+      Tuzla<br>
+      75000<br>
+      Bosna i Hercegovina<br>
+      <a href="mailto:info@ipi-akademija.ba">info@ipi-akademija.ba</a>
+  </p>
+
+  <hr style="margin: 30px 0; border: none; border-top: 2px solid #1e73be;">
+
+  <section class="kontakt-forma">
+      <h3>Pošaljite nam poruku</h3>
+      <form (submit)="validateForm(); $event.preventDefault()">
+          <fieldset>
+              <legend>Vaši podaci</legend>
+              <label for="ime">Ime i prezime:</label>
+              <input type="text" id="ime" placeholder="Vaše ime i prezime" required><br>
+
+              <label for="email">E-mail adresa:</label>
+              <input type="email" id="email" placeholder="npr. ime@domena.com" required><br>
+
+              <label for="tema">Tema poruke:</label>
+              <select id="tema" required>
+                  <option value="">-- Odaberite temu --</option>
+                  <option value="upis">Upis na kurseve</option>
+                  <option value="raspored">Raspored kurseva</option>
+                  <option value="tehnicka">Tehnička podrška</option>
+                  <option value="ostalo">Ostalo</option>
+              </select><br>
+
+              <label for="poruka">Poruka:</label>
+              <textarea id="poruka" rows="5" placeholder="Vaša poruka..." required></textarea><br>
+
+              <input type="checkbox" id="privatnost" required>
+              <label for="privatnost">Prihvatam <a href="#">politiku privatnosti</a>.</label><br><br>
+
+              <button type="submit">Pošalji poruku</button>
+          </fieldset>
+      </form>
+  </section>
+
+  <section class="kontakt-mapa">
+      <h3>Pronađite nas na karti</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.765443522128!2d18.671060776591176!3d44.5404349945972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ead18c8b55eff%3A0x26cffbf67ffbb9e2!2sInternacionalna%20poslovno-informaciona%20akademija!5e0!3m2!1shr!2sba!4v1762985790973!5m2!1shr!2sba" 
+        width="100%" 
+        height="350" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+  </section>
+</article>
+
+<footer>&copy; Internacionalna poslovno-informaciona akademija Tuzla</footer>

@@ -1,6 +1,6 @@
 h3 {
   margin-top: 10px;
-  color: #007BFF;
+  color: #1e73be;
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -13,7 +13,7 @@ h3 {
 }
 
 .toolbar button {
-  background-color: #007BFF;
+  background-color: #1e73be;
   color: white;
   border: none;
   border-radius: 6px;

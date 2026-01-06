@@ -1,0 +1,127 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  background: transparent;
+}
+
+.logo-wrap {
+  margin-bottom: 8px;
+}
+
+.logo {
+  height: 60px;
+}
+
+.page-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+  width: 100%;
+}
+
+.auth-article {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.register-container {
+  width: 480px;
+  margin: 40px auto;
+  padding: 36px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.register-container h2 {
+  margin-bottom: 20px;
+  color: #1e73be;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1e73be;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e73be;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.register-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.alt {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.linkish {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e73be;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  margin-left: 8px;
+}
+
+.linkish:hover {
+  background-color: #0056b3;
+}

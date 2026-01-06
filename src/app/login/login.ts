@@ -12,13 +12,13 @@ import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 })
 export class Login {
   private auth = inject(Auth);
-  private router = inject(Router);
+  public router = inject(Router);
 
   email = '';
   password = '';
 
   async loginUser() {
-    // Uklanjanje razmaka sa početka i kraja
+   
     const cleanEmail = this.email.trim();
 
     // Provjera osnovnog formata email-a
@@ -35,5 +35,14 @@ export class Login {
     } catch (error: any) {
       alert('Greška pri prijavi: ' + error.message);
     }
+  }
+
+  navigate(path: string, event?: Event) {
+    try { event?.preventDefault(); } catch {}
+    console.log('Login.navigate ->', path);
+    this.router.navigate([path]).catch(err => {
+      console.error('Login navigation error', err);
+      alert('Navigation error: ' + err);
+    });
   }
 }

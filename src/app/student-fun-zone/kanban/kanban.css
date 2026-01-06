@@ -1,6 +1,6 @@
 h3 {
   margin-top: 10px;
-  color: #007BFF;
+  color: #1e73be;
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -13,7 +13,7 @@ h3 {
 }
 
 .toolbar button {
-  background-color: #007BFF;
+  background-color: #1e73be;
   color: white;
   border: none;
   border-radius: 6px;
@@ -48,7 +48,7 @@ h3 {
   margin-top: 0;
   color: #333;
   text-align: center;
-  border-bottom: 2px solid #007BFF;
+  border-bottom: 2px solid #1e73be;
   padding-bottom: 10px;
 }
 
@@ -134,7 +134,7 @@ h3 {
 
 .modal-content h3 {
   margin-top: 0;
-  color: #007BFF;
+  color: #1e73be;
 }
 
 .modal-content input {
@@ -149,7 +149,7 @@ h3 {
 
 .modal-content input:focus {
   outline: none;
-  border-color: #007BFF;
+  border-color: #1e73be;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
 }
 
@@ -163,7 +163,7 @@ h3 {
 .modal-buttons button {
   padding: 10px 20px;
   border: none;
-  background: #007BFF;
+  background: #1e73be;
   color: white;
   border-radius: 6px;
   cursor: pointer;

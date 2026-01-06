@@ -46,4 +46,3 @@ export class Tracker {
     return this.selectedTrackers.includes(tracker);
   }
 }
-

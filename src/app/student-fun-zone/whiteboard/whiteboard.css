@@ -4,8 +4,8 @@ body {
     background: linear-gradient(135deg, #eef2f3, #8e9eab);
     display: flex;
     flex-direction: column;
-    align-items: center; /* centriranje horizontalno */
-    justify-content: flex-start; /* od vrha */
+    align-items: center; 
+    justify-content: flex-start; 
     min-height: 100vh;
 }
 
@@ -25,7 +25,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center; /* centriranje toolbar elemenata */
+    justify-content: center; 
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -37,7 +37,7 @@ h1 {
 }
 
 button {
-    background: #0078d7;
+    background: #1e73be;
     color: white;
     border: none;
     border-radius: 8px;
@@ -57,8 +57,8 @@ canvas {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     touch-action: none;
     cursor: url('/assets/slike/marker.png') 0 30, auto;
-    display: block; /* uklanja default inline-space */
-    margin: 0 auto; /* centriranje canvas-a */
+    display: block; 
+    margin: 0 auto; 
     max-width: 900px;
     width: 90vw;
     height: 500px;

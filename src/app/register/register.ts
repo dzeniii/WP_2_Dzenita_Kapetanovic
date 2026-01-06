@@ -1,7 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
-import { Auth, createUserWithEmailAndPassword, updateProfile } from '@angular/fire/auth';
+import { RouterModule, Router } from '@angular/router';
+import { Auth } from '@angular/fire/auth';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { Firestore, doc, setDoc } from '@angular/fire/firestore';
 
 @Component({
@@ -19,7 +20,7 @@ export class Register {
   name = '';
   email = '';
   password = '';
-  theme = 'green'; // default tema
+  theme = 'green';
 
   async registerUser() {
     if (!this.name || !this.email || !this.password) {
@@ -28,33 +29,33 @@ export class Register {
     }
 
     try {
-      // 1️⃣ Kreiranje korisnika u Firebase Auth
+      // Kreiranje korisnika u Auth
       const userCredential = await createUserWithEmailAndPassword(
         this.auth,
         this.email,
         this.password
       );
 
-      // 2️⃣ Postavi displayName
+      
       await updateProfile(userCredential.user, { displayName: this.name });
 
-      // 3️⃣ Spremi dodatne podatke u Firestore
-      await setDoc(doc(this.firestore, 'users', userCredential.user.uid), {
+      // Spremanje korisnika u Firestore
+      const uid = userCredential.user.uid;
+      const userDocRef = doc(this.firestore, `users/${uid}`); 
+
+      await setDoc(userDocRef, {
         name: this.name,
         email: this.email,
         theme: this.theme,
-        trackers: []  // kasnije dodavati habit/sleep/study itd.
+        trackers: []
       });
 
-      console.log('Korisnik dodan u Firestore:', userCredential.user.uid);
-
       alert('Registracija uspješna!');
-      this.router.navigate(['/login']); // preusmjeri na login
-
+      this.router.navigate(['/dashboard']);
+      
     } catch (error: any) {
       console.error('Greška pri registraciji:', error);
       alert('Greška: ' + error.message);
     }
   }
 }
-

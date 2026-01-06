@@ -28,7 +28,7 @@ export class Quiz {
 
     for (let i = 1; i <= total; i++) {
       const key = `q${i}`;
-      const selected = form.value[key] || []; // ovo dobije checked vrijednosti
+      const selected = form.value[key] || []; 
 
       // provjera niza odgovora
       const correct = this.answers[key] || [];
@@ -36,7 +36,7 @@ export class Quiz {
         Array.isArray(selected)
           ? selected.length === correct.length &&
             selected.every(val => correct.includes(val))
-          : selected === correct[0] // za radio button
+          : selected === correct[0] 
       ) {
         score++;
       }
