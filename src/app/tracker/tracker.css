@@ -1,33 +1,54 @@
+h2 {
+  text-align: center;
+  color: #1e73be; 
+  margin-bottom: 20px; 
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+
 .tracker-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .card {
-  padding: 20px;
   background-color: #f0f0f0;
-  border-radius: 10px;
+  border-radius: 15px;
+  width: 220px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
   cursor: pointer;
-  flex: 1 1 150px;
-  text-align: center;
-  transition: all 0.2s;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .card:hover {
   background-color: #e0e0e0;
+  transform: translateY(-5px);
 }
 
-.card.active {
-  background-color: #1e73be;
-  color: white;
+.card img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.card-text {
   font-weight: bold;
+  font-size: 16px;
+  color: #1e73be;
+  text-align: center;
 }
 
-.selected-trackers {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.selected-tracker {
+  margin-top: 30px;
 }
-

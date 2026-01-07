@@ -1,4 +1,32 @@
 <h3>Habit Tracker</h3>
-<p>Koliko navika si danas ispunila?</p>
-<input type="number" [(ngModel)]="habitsDone" placeholder="npr. 2" />
-<button (click)="saveHabits()">Save</button>
+<p class="counter">{{ completedCount }} od {{ habits.length }} navika završeno danas</p>
+
+<div class="grid">
+  <div 
+    class="habit-box" 
+    *ngFor="let habit of habits; let i = index"
+    [class.done]="habit.done"
+    (click)="toggleHabit(i)"
+  >
+    <span>{{ habit.name }}</span>
+    <span class="check" *ngIf="habit.done">✔</span>
+  </div>
+</div>
+
+<div class="add-section">
+  <input #habitInput type="text" placeholder="Dodaj novu naviku..." />
+  <button (click)="addHabit(habitInput.value); habitInput.value=''">Dodaj</button>
+</div>
+<div class="history-section" *ngIf="selectedHabit">
+  <h4>Historija za: {{ selectedHabit }}</h4>
+
+  <div 
+    class="habit-box history-box"
+    *ngFor="let record of history"
+    [class.done]="record.completed.includes(selectedHabit)"
+  >
+    <span>{{ record.date }}</span>
+    <span class="check" *ngIf="record.completed.includes(selectedHabit)">✔</span>
+    <span class="check" *ngIf="!record.completed.includes(selectedHabit)">✖</span>
+  </div>
+</div>

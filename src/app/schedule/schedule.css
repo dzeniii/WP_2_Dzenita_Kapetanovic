@@ -161,31 +161,40 @@ footer {
   border-radius: 0 0 8px 8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
 
-  nav a {
-    padding: 10px;
-    display: block;
-    text-align: center;
-  }
+/* Tabela rasporeda */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
 
-  article {
-    width: 90%;
-    padding: 20px 30px;
-  }
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+}
 
-  article img {
-    float: none;
-    display: block;
-    margin: 20px auto;
-  }
+table th {
+  background-color: #1e73be;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
 
-  article, footer {
-    width: 90%;
-  }
+table tr:nth-child(even) {
+  background-color: #f4f7fa;
+}
+
+table tr:hover {
+  background-color: #dbe9f7;
+  transition: background 0.3s ease;
+}
+
+table td {
+  border-bottom: 1px solid #e1eaff;
 }

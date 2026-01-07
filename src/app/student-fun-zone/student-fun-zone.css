@@ -1,3 +1,10 @@
+h2 {
+  text-align: center;
+  color: #1e73be; /* opcionalno, isto kao i tekst na boxovima */
+  margin-bottom: 20px; /* malo prostora ispod */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
 .fun-zone-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

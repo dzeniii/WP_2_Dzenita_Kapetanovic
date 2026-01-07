@@ -10,6 +10,14 @@ import { Courses } from './courses/courses';
 import { Schedule } from './schedule/schedule';
 import { Contact } from './contact/contact';
 
+// Tracker komponente
+import { HabitTracker } from './tracker/habit-tracker/habit-tracker';
+import { SleepTracker } from './tracker/sleep-tracker/sleep-tracker';
+import { StudyPlanner } from './tracker/study-planner/study-planner';
+import { YogaFitness } from './tracker/yoga-fitness/yoga-fitness';
+import { TaskPlanner } from './tracker/task-planner/task-planner';
+import { WaterIntake } from './tracker/water-intake/water-intake';
+
 export const routes: Routes = [
   { path: '', component: Home },
   { path: 'login', component: Login },
@@ -24,6 +32,12 @@ export const routes: Routes = [
     children: [
       { path: 'profile', component: Profile },
       { path: 'trackers', component: Tracker },
+      { path: 'trackers/habit', component: HabitTracker },
+      { path: 'trackers/sleep', component: SleepTracker },
+      { path: 'trackers/study', component: StudyPlanner },
+      { path: 'trackers/yoga', component: YogaFitness },
+      { path: 'trackers/task', component: TaskPlanner },
+      { path: 'trackers/water', component: WaterIntake },
       { path: 'student-fun-zone', component: StudentFunZone, children: funRoutes }
     ]
   },

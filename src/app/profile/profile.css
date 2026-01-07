@@ -1,26 +1,35 @@
-.navbar {
-  background: #1e73be;
-  padding: 15px 20px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  color: white;
+h2 {
+  text-align: center;
+  color: #1e73be; 
+  margin-bottom: 30px; 
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
   padding: 20px;
-  font-family: Poppins, sans-serif;
+  gap: 20px;
+}
+
+.profile-card {
+  max-width: 400px;
+  background-color: #f0f4f8;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.profile-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
 }
 
 

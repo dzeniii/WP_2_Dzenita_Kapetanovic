@@ -10,96 +10,6 @@ body {
   line-height: 1.6;
 }
 
-header {
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-}
-
-.header-logo {
-  display: flex;
-  justify-content: center;
-  padding: 15px 0;
-  background-color: #ffffff;
-}
-
-.logo {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 80px;
-  width: auto;
-}
-
-nav {
-  width: 100%;
-  background-color: #1e73be;
-  border-top: 3px solid #1565c0;
-  border-bottom: 3px solid #1565c0;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav a {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s ease, color 0.3s ease;
-  padding: 12px 15px;
-  font-size: 13px;
-  display: inline-block;
-}
-
-nav a:hover {
-  background-color: #0d47a1;
-}
-
-.nav-btn {
-  border: 2px solid white;
-  padding: 10px 15px;
-  font-size: 12px;
-}
-
-.login-btn {
-  background-color: #0d47a1;
-  border-color: #0d47a1;
-  color: #ffffff;
-}
-
-.login-btn:hover {
-  background-color: #051c5e;
-}
-
-.register-btn {
-  background-color: #0d47a1;
-  border-color: #0d47a1;
-  color: #ffffff;
-}
-
-.register-btn:hover {
-  background-color: #051c5e;
-}
-
 /* Tekst i linkovi */
 a, a:hover, a:visited, a:active {
   color: #1e73be;
@@ -161,34 +71,6 @@ footer {
   border-radius: 0 0 8px 8px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  nav a {
-    padding: 10px;
-    display: block;
-    text-align: center;
-  }
-
-  article {
-    width: 90%;
-    padding: 20px 30px;
-  }
-
-  article img {
-    float: none;
-    display: block;
-    margin: 20px auto;
-  }
-
-  article, footer {
-    width: 90%;
-  }
-}
 /* Kontakt forma */
 .kontakt-forma {
   margin: 30px 0;
@@ -273,10 +155,29 @@ footer {
     font-size: 13px;
   }
 }
+
+/* Slika srca */
 .kontakt-srce {
-    display: block;           /* blok element da margin radi */
-    margin: -10px auto 20px;  /* pomakni gore -10px i dodaj razmak ispod */
-    max-width: 100%;          /* da se ne preliva preko sadržaja */
+    display: block;
+    margin: -10px auto 20px;
+    max-width: 100%;
     height: auto;
 }
 
+/* Responsive article i footer */
+@media (max-width: 768px) {
+  article {
+    width: 90%;
+    padding: 20px 30px;
+  }
+
+  article img {
+    float: none;
+    display: block;
+    margin: 20px auto;
+  }
+
+  article, footer {
+    width: 90%;
+  }
+}

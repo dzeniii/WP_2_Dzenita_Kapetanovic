@@ -1,17 +1,93 @@
-input {
-  padding: 10px;
-  width: 200px;
+h3 {
+  font-size: 22px;
   margin-bottom: 10px;
-  border-radius: 6px;
+  color: #1e73be;
+}
+
+.counter {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.habit-box {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #1e73be;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.habit-box:hover {
+  transform: scale(1.05);
+}
+
+.habit-box.done {
+  background: #1e73be;
+  color: white;
+}
+
+.check {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-section {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-section input {
+  padding: 10px;
+  flex: 1;
+  border-radius: 8px;
   border: 1px solid #ccc;
 }
 
-button {
+.add-section button {
   background: #1e73be;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
+.history-section {
+  margin-top: 25px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1e73be;
+  font-weight: bold;
+}
+
+.history-box {
+  margin-bottom: 10px;
+  border-color: #1e73be;
+}
+
+.history-box span:last-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
 

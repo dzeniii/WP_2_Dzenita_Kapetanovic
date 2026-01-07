@@ -1,4 +1,17 @@
-<section class="profile-container">
-  <h2>Your Profile</h2>
-  <p>This is your personal profile page.</p>
-</section>
+<h2>Profil korisnika</h2>
+
+<div *ngIf="!loggedIn" class="not-logged">
+  Korisnik nije ulogovan.
+</div>
+
+<div *ngIf="loggedIn && userData" class="profile-card">
+
+  <p><strong>Ime:</strong> {{ userData.name }}</p>
+  <p><strong>Email:</strong> {{ userData.email }}</p>
+  <p><strong>Tema:</strong> {{ userData.theme }}</p>
+
+</div>
+
+<div *ngIf="loggedIn && !userData">
+  <p>Podaci nisu pronađeni u bazi.</p>
+</div>

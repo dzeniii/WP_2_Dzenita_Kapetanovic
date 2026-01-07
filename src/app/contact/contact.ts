@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from '../header/header'; // <-- import Header
 
 @Component({
   selector: 'app-kontakt',
+  standalone: true, // <-- obavezno za standalone
+  imports: [CommonModule, RouterModule, HeaderComponent], // <-- dodaj Header ovdje
   templateUrl: './contact.html',
   styleUrls: ['./contact.css'] 
 })

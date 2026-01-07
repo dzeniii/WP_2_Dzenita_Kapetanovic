@@ -1,22 +1,4 @@
-<header>
-  <div class="header-logo">
-    <a routerLink="/" class="logo">
-      <img src="/assets/slike/logo-ipi.png" alt="Kursevi IPI">
-    </a>
-  </div>
-
- <nav>
-  <ul>
-    <li><a routerLink="/">O kursevima</a></li>
-    <li><a routerLink="/courses">Popis kurseva</a></li>
-    <li><a routerLink="/schedule">Raspored</a></li>
-    <li><a routerLink="/contact">Kontakt</a></li>
-    <li><button type="button" (click)="navigate('/login', $event)" class="nav-btn login-btn">Prijava</button></li>
-    <li><button type="button" (click)="navigate('/register', $event)" class="nav-btn register-btn">Registracija</button></li>
-  </ul>
-</nav>
-
-</header>
+<app-header></app-header>
 
 
 <article id="about">
