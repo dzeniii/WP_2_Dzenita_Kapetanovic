@@ -1,17 +1,11 @@
 <h2>Profil korisnika</h2>
-
-<div *ngIf="!loggedIn" class="not-logged">
-  Korisnik nije ulogovan.
-</div>
-
-<div *ngIf="loggedIn && userData" class="profile-card">
-
-  <p><strong>Ime:</strong> {{ userData.name }}</p>
-  <p><strong>Email:</strong> {{ userData.email }}</p>
-  <p><strong>Tema:</strong> {{ userData.theme }}</p>
-
-</div>
-
-<div *ngIf="loggedIn && !userData">
-  <p>Podaci nisu pronađeni u bazi.</p>
-</div>
+<section class="profile-container">
+  <div *ngIf="loggedIn; else notLogged">
+    <p><strong>Ime:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <pre>{{ userData | json }}</pre>
+  </div>
+  <ng-template #notLogged>
+    <p>Korisnik nije ulogovan.</p>
+  </ng-template>
+</section>
